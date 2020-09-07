@@ -5,7 +5,7 @@ and on going progress to ready live.
 
 with highlight features,
 
-|                     |     |             |
+
 |Name Features        |❌/✔| Info        |
 |---------------------|-----|-------------|
 |Payment Gateway      | ❌  | Midtrans    |
@@ -22,7 +22,7 @@ with highlight features,
 |Points Systems       | ❌  |             |
 |Sorting Product      | ❌  |             |
 |QuickViews           | ❌  |             |
-|                     |     |             |
+
 
 And other features in the futures as possible.
 
