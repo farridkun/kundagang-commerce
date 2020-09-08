@@ -3,7 +3,7 @@
 Kundagang is a e-commerce build with Laravel,
 and on going progress to ready live.
 
-with highlight features,
+with highlight features below,
 
 
 |Name Features        |❌/✔| Info        |
