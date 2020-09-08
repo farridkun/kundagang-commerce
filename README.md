@@ -1,6 +1,6 @@
 ## Kundagang E-Commerce
 
-Kundagang is a e-commerce build with Laravel,
+Kundagang is a e-commerce platform build with Laravel,
 and on going progress to ready live.
 
 with highlight features below,
@@ -25,6 +25,14 @@ with highlight features below,
 
 
 And other features in the futures as possible.
+
+Available 2 Roles :
+
+`Administrator`
+``admin@gmail.com | password``
+
+`Operator`
+``operator@gmail.com | password``
 
 ``Main Technologies is LARAVEL 7.x & Bootstraps 4.``
 

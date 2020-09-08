@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Authorizable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductImageRequest;
 use App\Http\Requests\ProductRequest;
@@ -21,6 +22,8 @@ use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
+
+    use Authorizable;
 
     public function __construct()
     {
@@ -157,7 +160,7 @@ class ProductController extends Controller
         $product = DB::transaction(function() use ($params) {
             $categoryIds = !empty($params['category_ids']) ? $params['category_ids'] : [];
             $product = Product::create($params);
-            $product->categories()->sync($params['category_ids']);
+            $product->categories()->sync($categoryIds);
 
             if ($params['type'] == 'configurable') {
                 $this->generateProductVariants($product, $params);
@@ -199,6 +202,7 @@ class ProductController extends Controller
         }
 
         $product = Product::findOrFail($id);
+        $product->qty = isset($product->ProductInventory) ? $product->ProductInventory->qty : null;
         $categories = Category::orderBy('name', 'ASC')->get();
 
         $this->data['categories'] = $categories->toArray();

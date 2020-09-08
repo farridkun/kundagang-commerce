@@ -34,7 +34,7 @@ class AlterAsNullableColumnInProductsTable extends Migration
             $table->decimal('weight', 15, 2)->nullable(false)->change();
             $table->text('short_description')->nullable(false)->change();
             $table->text('description')->nullable(false)->change();
-            $table->integer('status')->nullable(false)->change();
+            $table->integer('status')->nulllable(false)->change();
         });
     }
 }
