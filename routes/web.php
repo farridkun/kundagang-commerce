@@ -36,6 +36,9 @@ Route::group(
         Route::get('attributes/options/{optionID}/edit', 'AttributeController@edit_option')->name('attributes.edit_option');
         Route::put('attributes/options/{optionID}', 'AttributeController@update_option')->name('attributes.update_option');
 
+        Route::resource('roles', 'RoleController');
+        Route::resource('users', 'UserController');
+
     }
 );
 
